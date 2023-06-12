@@ -7,7 +7,7 @@
  * @summary Map para el registro de datos de la busqueda guarada "AGCH Guardado combinaciones mes DEB CRED"
  * @copyright Tekiio México 2022
  * 
- * Client              -> GNC SB1
+ * Client              -> GNC SB2
  * Last modification   -> 30/04/2023
  * Modified by         -> Dylan Mendoza <dylan.mendoza@tekiio.mx>
  * Script in NS        -> Tkio - Guardado de Combinaciones <customscript_tkio_guardado_combinaciones>

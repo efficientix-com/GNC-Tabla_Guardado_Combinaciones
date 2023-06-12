@@ -11,8 +11,5 @@
       <feature required="true">CUSTOMRECORDS</feature>
       <feature required="false">CREATESUITEBUNDLES</feature>
     </features>
-    <objects>
-      <object>customsearch2125</object>
-    </objects>
   </dependencies>
 </manifest>
