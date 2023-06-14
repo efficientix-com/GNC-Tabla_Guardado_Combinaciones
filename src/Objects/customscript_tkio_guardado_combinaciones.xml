@@ -66,7 +66,7 @@
     <scriptdeployment scriptid="customdeploy_tkio_guardado_combin_manual">
       <buffersize>1</buffersize>
       <concurrencylimit>1</concurrencylimit>
-      <custscript_tkio_fin_ciclo>F</custscript_tkio_fin_ciclo>
+      <custscript_tkio_fin_ciclo>T</custscript_tkio_fin_ciclo>
       <custscript_tkio_gua_combinaciones_search>[scriptid=customsearch2125]</custscript_tkio_gua_combinaciones_search>
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
@@ -86,7 +86,7 @@
     <scriptdeployment scriptid="customdeploy_tkio_guardado_combinaciones">
       <buffersize>1</buffersize>
       <concurrencylimit>2</concurrencylimit>
-      <custscript_tkio_fin_ciclo>F</custscript_tkio_fin_ciclo>
+      <custscript_tkio_fin_ciclo>T</custscript_tkio_fin_ciclo>
       <custscript_tkio_gua_combinaciones_search>[scriptid=customsearch2125]</custscript_tkio_gua_combinaciones_search>
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
