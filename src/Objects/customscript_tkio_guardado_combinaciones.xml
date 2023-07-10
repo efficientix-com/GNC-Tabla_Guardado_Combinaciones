@@ -41,7 +41,7 @@
       <defaultchecked>F</defaultchecked>
       <defaultselection></defaultselection>
       <defaultvalue></defaultvalue>
-      <description>Check para marcar el fin de ejecución.</description>
+      <description>Check para marcar que se esta ejecutando el script.</description>
       <displayheight></displayheight>
       <displaytype>NORMAL</displaytype>
       <displaywidth></displaywidth>
@@ -50,7 +50,7 @@
       <help></help>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
-      <label>Fin ciclo</label>
+      <label>Procesando</label>
       <linktext></linktext>
       <maxlength></maxlength>
       <maxvalue></maxvalue>
@@ -63,30 +63,10 @@
     </scriptcustomfield>
   </scriptcustomfields>
   <scriptdeployments>
-    <scriptdeployment scriptid="customdeploy_tkio_guardado_combin_manual">
-      <buffersize>1</buffersize>
-      <concurrencylimit>1</concurrencylimit>
-      <custscript_tkio_fin_ciclo>T</custscript_tkio_fin_ciclo>
-      <custscript_tkio_gua_combinaciones_search>[scriptid=customsearch2125]</custscript_tkio_gua_combinaciones_search>
-      <isdeployed>T</isdeployed>
-      <loglevel>DEBUG</loglevel>
-      <queueallstagesatonce>T</queueallstagesatonce>
-      <runasrole>ADMINISTRATOR</runasrole>
-      <status>NOTSCHEDULED</status>
-      <title>Tkio - Guardado de Combinaciones Manual</title>
-      <yieldaftermins>60</yieldaftermins>
-      <recurrence>
-        <single>
-          <repeat></repeat>
-          <startdate>2022-10-17</startdate>
-          <starttime>23:00:00Z</starttime>
-        </single>
-      </recurrence>
-    </scriptdeployment>
     <scriptdeployment scriptid="customdeploy_tkio_guardado_combinaciones">
       <buffersize>1</buffersize>
       <concurrencylimit>2</concurrencylimit>
-      <custscript_tkio_fin_ciclo>T</custscript_tkio_fin_ciclo>
+      <custscript_tkio_fin_ciclo>F</custscript_tkio_fin_ciclo>
       <custscript_tkio_gua_combinaciones_search>[scriptid=customsearch2125]</custscript_tkio_gua_combinaciones_search>
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
@@ -104,24 +84,25 @@
         </daily>
       </recurrence>
     </scriptdeployment>
-    <scriptdeployment scriptid="customdeploy_tkio_guardado_combin_2">
+    <scriptdeployment scriptid="customdeploy_tkio_guardado_combin_manual">
       <buffersize>1</buffersize>
-      <concurrencylimit>2</concurrencylimit>
-      <custscript_tkio_fin_ciclo>T</custscript_tkio_fin_ciclo>
+      <concurrencylimit>1</concurrencylimit>
+      <custscript_tkio_fin_ciclo>F</custscript_tkio_fin_ciclo>
       <custscript_tkio_gua_combinaciones_search>[scriptid=customsearch2125]</custscript_tkio_gua_combinaciones_search>
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
       <queueallstagesatonce>T</queueallstagesatonce>
       <runasrole>ADMINISTRATOR</runasrole>
       <status>NOTSCHEDULED</status>
-      <title>Tkio - Guardado de Combinaciones 2</title>
+      <title>Tkio - Guardado de Combinaciones Manual</title>
       <yieldaftermins>60</yieldaftermins>
       <recurrence>
-        <single>
+        <daily>
+          <everyxdays>1</everyxdays>
           <repeat></repeat>
-          <startdate>2023-04-30</startdate>
-          <starttime>23:00:00Z</starttime>
-        </single>
+          <startdate>2022-10-18</startdate>
+          <starttime>01:00:00Z</starttime>
+        </daily>
       </recurrence>
     </scriptdeployment>
   </scriptdeployments>
