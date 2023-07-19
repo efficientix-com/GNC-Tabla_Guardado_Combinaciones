@@ -150,6 +150,7 @@ define(['N/log', 'N/record', 'N/search', 'N/task', 'N/runtime'],
             try {
                 log.audit({title:'Fin del borrado', details:'Fin del borrado'});
                 var parameter_deploy = runtime.getCurrentScript().getParameter({name: "custscript_fb_borrado_deplo"});
+                var parameter_deploy_text = runtime.getCurrentScript().getParameter({name: "custscript_fb_borrado_deplo_text"});
                 var dataEjecute = record.load({
                     type: record.Type.SCRIPT_DEPLOYMENT,
                     id: parameter_deploy
@@ -162,12 +163,14 @@ define(['N/log', 'N/record', 'N/search', 'N/task', 'N/runtime'],
                     enableSourcing: true,
                     ignoreMandatoryFields: true
                 });
-                if (updScript) {
+                if (updScript && parameter_deploy_text) {
                     log.audit({title:'EJECUTANDO LA CREACION', details:'EJECUTANDO LA CREACION'});
                     var mrTask = task.create({taskType: task.TaskType.MAP_REDUCE});
                     mrTask.scriptId = 'customscript_tkio_guardado_combinaciones';
-                    mrTask.deploymentId = 'customdeploy_tkio_guardado_combinaciones';
+                    mrTask.deploymentId = parameter_deploy_text;
                     var mrTaskId = mrTask.submit();
+                }else{
+                    log.error({title:'Ingrese la configuración', details:'Ingrese los valores para los campos de creación de registros'});
                 }
             } catch (error) {
                 log.error({title:'summarize', details:error});

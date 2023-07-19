@@ -1,7 +1,7 @@
 <mapreducescript scriptid="customscript_fb_borrado_combinaciones">
   <description>Script para el borrado de la tabla de Artus para continuar con la creación de la misma.</description>
   <isinactive>F</isinactive>
-  <name>FB - Borrado de Combinaciones</name>
+  <name>FB - Borrado y creacion de Combinaciones</name>
   <notifyadmins>F</notifyadmins>
   <notifyemails></notifyemails>
   <notifyowner>T</notifyowner>
@@ -77,7 +77,34 @@
       <help></help>
       <isformula>F</isformula>
       <ismandatory>T</ismandatory>
-      <label>ID Creacion</label>
+      <label>ID Creacion numerico</label>
+      <linktext></linktext>
+      <maxlength></maxlength>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <onparentdelete></onparentdelete>
+      <searchlevel>2</searchlevel>
+      <selectrecordtype></selectrecordtype>
+      <setting></setting>
+      <storevalue>T</storevalue>
+    </scriptcustomfield>
+    <scriptcustomfield scriptid="custscript_fb_borrado_deplo_text">
+      <accesslevel>2</accesslevel>
+      <applyformatting>F</applyformatting>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displayheight></displayheight>
+      <displaytype>NORMAL</displaytype>
+      <displaywidth></displaywidth>
+      <dynamicdefault></dynamicdefault>
+      <fieldtype>TEXT</fieldtype>
+      <help></help>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <label>ID Creacion Text</label>
       <linktext></linktext>
       <maxlength></maxlength>
       <maxvalue></maxvalue>
@@ -93,20 +120,44 @@
     <scriptdeployment scriptid="customdeploy_fb_borrado_combinaciones">
       <buffersize>1</buffersize>
       <concurrencylimit>1</concurrencylimit>
-      <custscript_fb_borrado_deplo></custscript_fb_borrado_deplo>
+      <custscript_fb_borrado_deplo>5548</custscript_fb_borrado_deplo>
+      <custscript_fb_borrado_deplo_text>customdeploy_tkio_guardado_combinaciones</custscript_fb_borrado_deplo_text>
       <custscript_fb_borrado_search>[scriptid=customsearch_tkio_delete_guard_combina]</custscript_fb_borrado_search>
       <custscript_fb_borrado_type>customrecord_tkio_guardado_combinaciones</custscript_fb_borrado_type>
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
       <queueallstagesatonce>T</queueallstagesatonce>
       <runasrole>ADMINISTRATOR</runasrole>
+      <status>SCHEDULED</status>
+      <title>FB - Borrado y creacion de Combinaciones</title>
+      <yieldaftermins>60</yieldaftermins>
+      <recurrence>
+        <daily>
+          <everyxdays>1</everyxdays>
+          <repeat></repeat>
+          <startdate>2023-07-11</startdate>
+          <starttime>00:00:00Z</starttime>
+        </daily>
+      </recurrence>
+    </scriptdeployment>
+    <scriptdeployment scriptid="customdeploy_fb_borrado_combina_manual">
+      <buffersize>1</buffersize>
+      <concurrencylimit>1</concurrencylimit>
+      <custscript_fb_borrado_deplo>5547</custscript_fb_borrado_deplo>
+      <custscript_fb_borrado_deplo_text>customdeploy_tkio_guardado_combin_manual</custscript_fb_borrado_deplo_text>
+      <custscript_fb_borrado_search>[scriptid=customsearch_tkio_delete_guard_combina_2]</custscript_fb_borrado_search>
+      <custscript_fb_borrado_type>customrecord_tkio_guardado_combinaciones</custscript_fb_borrado_type>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <queueallstagesatonce>T</queueallstagesatonce>
+      <runasrole>ADMINISTRATOR</runasrole>
       <status>NOTSCHEDULED</status>
-      <title>FB - Borrado de Combinaciones</title>
+      <title>FB - Borrado y creacion de Combinaciones Manual</title>
       <yieldaftermins>60</yieldaftermins>
       <recurrence>
         <single>
           <repeat></repeat>
-          <startdate>2023-07-11</startdate>
+          <startdate>2023-07-13</startdate>
           <starttime>00:00:00Z</starttime>
         </single>
       </recurrence>
