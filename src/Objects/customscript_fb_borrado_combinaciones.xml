@@ -22,7 +22,7 @@
       <fieldtype>SELECT</fieldtype>
       <help></help>
       <isformula>F</isformula>
-      <ismandatory>T</ismandatory>
+      <ismandatory>F</ismandatory>
       <label>Busqueda Guardada</label>
       <linktext></linktext>
       <maxlength></maxlength>
@@ -122,7 +122,7 @@
       <concurrencylimit>1</concurrencylimit>
       <custscript_fb_borrado_deplo>5548</custscript_fb_borrado_deplo>
       <custscript_fb_borrado_deplo_text>customdeploy_tkio_guardado_combinaciones</custscript_fb_borrado_deplo_text>
-      <custscript_fb_borrado_search>[scriptid=customsearch_tkio_delete_guard_combina]</custscript_fb_borrado_search>
+      <custscript_fb_borrado_search></custscript_fb_borrado_search>
       <custscript_fb_borrado_type>customrecord_tkio_guardado_combinaciones</custscript_fb_borrado_type>
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
@@ -145,7 +145,7 @@
       <concurrencylimit>1</concurrencylimit>
       <custscript_fb_borrado_deplo>5547</custscript_fb_borrado_deplo>
       <custscript_fb_borrado_deplo_text>customdeploy_tkio_guardado_combin_manual</custscript_fb_borrado_deplo_text>
-      <custscript_fb_borrado_search>[scriptid=customsearch_tkio_delete_guard_combina_2]</custscript_fb_borrado_search>
+      <custscript_fb_borrado_search></custscript_fb_borrado_search>
       <custscript_fb_borrado_type>customrecord_tkio_guardado_combinaciones</custscript_fb_borrado_type>
       <isdeployed>T</isdeployed>
       <loglevel>DEBUG</loglevel>
